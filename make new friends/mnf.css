@@ -1,0 +1,103 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    /* This means the total width and height of the element won't grow beyond the specified values, regardless of padding or border sizes. */
+    font-family: 'Poppins','sans-serif';
+}
+.hero{
+    width:100%;
+    height:100vh;
+    background-image: url('backimage.png');
+    background-position: center;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow :hidden;
+    /* Excess content that doesn't fit within the width or height of the element is clipped (hidden) and won't be visible. */
+    position: relative;
+
+}
+nav{
+    padding: 10px 0; /* padding 10px from top and bottom (left and right are zero) */
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Space is added between the items but not at the edges */
+}
+.logo{
+    width:140px;
+}
+nav ul li{
+    display: inline-block;
+    /* The element flows along with other content in a line (does not start on a new line)
+    You can set width, height, padding, and margin properties, just like a block element. */
+    list-style: none;
+    /* It is commonly used when you want to style lists without using the browser's default styling. */
+    margin: 10px 15px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 400; /* specifies  the boldness of the text*/
+}
+.login-btn{
+    text-decoration: none;
+    color:#333;
+    margin-right:15px;
+    font-weight:400;
+}
+.btn{
+    display:inline-block;
+    text-decoration: none;
+    padding:14px 40px;
+    color: #fff;
+    background-image: linear-gradient(45deg,#df4881, #c430d7);
+    /* A linear gradient in CSS creates a smooth transition between two or more colors along a straight line. */
+    font-size:14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: 0.5s;
+}
+.content{
+    margin-top: 10%;
+    max-width: 600px;
+}
+.content h1{
+    font-size:70px;
+    color: #222;
+}
+.content p{
+    margin: 10px 0 30px; /*(10px from top 0px from left and right 30 from bottom) */
+    color: #333;
+    animation-delay: 0.5s;
+}
+.content .btn{
+    padding: 15px 80px;
+    font-size:16px;
+    animation-delay: 1s;
+}
+.btn:hover{
+    border-top-right-radius:30px
+}
+.feature-img{
+    width: 530px;
+    position: absolute;
+    bottom: 0;
+    right:10%;
+
+}
+.feature-img anim{
+    animation-delay: 1.5s;
+}
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear  forwards;;
+
+}
+@keyframes moveup{
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
